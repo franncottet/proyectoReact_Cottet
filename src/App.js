@@ -1,12 +1,12 @@
 import React from "react";
+import Navbar from "./components/Navbar.js";
 
-const App = () => {
-
-    const saludo = "saludo desde variable"
+const App = () => {  
     return (
-        <div className="container">{saludo}</div>
+        <div>
+            <Navbar/>
+         </div>
     )
-
-};
+ }
 
 export default App;
