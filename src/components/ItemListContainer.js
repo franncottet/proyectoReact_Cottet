@@ -5,12 +5,14 @@ import ItemCount from './itemcount/ItemCount'
 
 const ItemListContainer = () => {
 
-  
+  const onAdd = (cantidadProductos) => {
+alert(`Vas a comprar ${cantidadProductos} productos`)
+  }
 
   return (
     <>
     <Catalog Bienvenida="TrumanCaps" />
-    <ItemCount initial={1} StockDisponible={10}/>
+    <ItemCount StockDisponible={10} onAdd={onAdd}/>
     </>
   )
 }

@@ -3,7 +3,7 @@ import "./ItemCount.css"
 
 
 
-const ItemCount = ({StockDisponible}) => {
+const ItemCount = ({StockDisponible, onAdd}) => {
 
 const [contador, setContador] = useState(1);
 
@@ -34,7 +34,10 @@ const decrementar = () => {
       disabled={contador >= StockDisponible}
       >+</button>
 <div>
-  <button className="mt-2 btn btn-success">Agregar al carrito</button>
+  <button
+  className="mt-2 btn btn-success"
+  disabled={StockDisponible<=0} onClick={() => {onAdd(contador)}}
+  >Agregar al carrito</button>
 </div>
       
       </div>
