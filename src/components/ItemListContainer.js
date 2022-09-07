@@ -4,10 +4,13 @@ import ItemCount from './itemcount/ItemCount'
 
 
 const ItemListContainer = () => {
+
+  
+
   return (
     <>
     <Catalog Bienvenida="TrumanCaps" />
-    <ItemCount/>
+    <ItemCount initial={1} StockDisponible={10}/>
     </>
   )
 }
