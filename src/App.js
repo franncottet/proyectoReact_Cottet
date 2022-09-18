@@ -6,16 +6,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart/Cart.js";
 
 
-const App = () => {  
+function App () {  
     return (
         <>
        <BrowserRouter>
             <Navbar/>
             <Routes>
               <Route path="/" element={<ItemListContainer/>} />
-              <Route path="/categoria" element={<ItemListContainer/>} />
+              <Route path="/categoria/:categoriaId" element={<ItemListContainer/>} />
               <Route path="/cart" element={<Cart/>} />
-              <Route path="/categoria" element={<ItemDetailContainer/>} />
+              <Route path="/categoria2" element={<ItemDetailContainer/>} />
             </Routes>
             
             
