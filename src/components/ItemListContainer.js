@@ -23,27 +23,25 @@ const ItemListContainer = () => {
   const getData = new Promise(resolve=>{
   setTimeout(() => {
   resolve(caps)
-      }, 1000);
+      }, );
 
  });
  if (categoriaId) {
   getData.then(res => setData(res.filter(cap=>cap.category===categoriaId)))
  }else{
-  getData.then(res => setData(res))
+  getData.then(res => setData(res));
  }
 
 
  }, [categoriaId])
 
 
-  const onAdd = (cantidadProductos) => {
-alert(`Vas a comprar ${cantidadProductos} productos`)
-  }
+  
 
   return (
     <>
     <Catalog Bienvenida="TrumanCaps" />
-    <ItemCount StockDisponible={10} onAdd={onAdd}/>
+    
     <ItemList data={data}/>
     </>
   )
