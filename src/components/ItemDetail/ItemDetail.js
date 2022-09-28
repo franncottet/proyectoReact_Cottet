@@ -9,11 +9,11 @@ import {useCartContext} from '../../CartContext'
 const ItemDetail = ({data}) => {
 
   const [irAlCarrito, setIrAlCarrito] = useState(false)
-  const {addProduct} = useCartContext
+  const addProduct = useCartContext
 
  
 
-const onAdd = (cantidadProductos) => {
+const onAdd = (quantity) => {
 setIrAlCarrito(true)
 addProduct(data, quantity)
   }

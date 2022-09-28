@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart/Cart.js";
 import About from "./components/About.js";
-import { CartProvider } from "CartContext";
+import { CartProvider } from "./CartContext";
 
 
 
