@@ -10,9 +10,8 @@ export const CartWidget = () => {
     <i className="bi bi-cart3"></i>
     <span>{totalProducts()||''}</span>
     </>
-    
-
-  )
+  
+  );
 }
 
 export default CartWidget
