@@ -4,12 +4,13 @@ import { useCartContext } from "../CartContext";
 
 export const CartWidget = (props) => {
 
-  const{totalProducts}=useCartContext();
-  
+  const{totalProducts}=useCartContext(props);
+  console.log('props obj:', props)
   return (
     <>
     <i className="bi bi-cart3"></i>
-    <span>{totalProducts() || ''}</span>
+    <span>{totalProducts(props) || ''}</span>
+    
     </>
   
   );
